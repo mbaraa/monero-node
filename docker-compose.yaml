@@ -1,6 +1,6 @@
 services:
-  website:
-    container_name: "website"
+  monero-node-website:
+    container_name: "monero-node-website"
     build:
       context: ./website
       dockerfile: Dockerfile
@@ -9,8 +9,8 @@ services:
       - "26291:3000"
     stdin_open: true
 
-  monerod:
-    container_name: "monerod"
+  monero-node-monerod:
+    container_name: "monero-node-monerod"
     build:
       context: ./monerod
       dockerfile: Dockerfile

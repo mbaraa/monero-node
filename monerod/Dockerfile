@@ -10,7 +10,7 @@ ARG MONERO_WALLET_VERSION=0.18.4.5
 
 RUN wget https://downloads.getmonero.org/cli/monero-linux-x64-v${MONERO_WALLET_VERSION}.tar.bz2 && \
     7z x monero-linux-x64-v${MONERO_WALLET_VERSION}.tar.bz2 && \
-    7z x monero-linux-x64-v${MONERO_WALLET_VERSION}.tar -o./monero-wallet && \
+    7z x monero-linux-x64-v${MONERO_WALLET_VERSION}.tar && \
     rm -f monero-linux-x64-v${MONERO_WALLET_VERSION}.tar.bz2 && \
     rm -f monero-linux-x64-v${MONERO_WALLET_VERSION}.tar
 
