@@ -74,7 +74,9 @@ func main() {
 		log.Fatalln("Error accessing embedded directory:", err)
 		return
 	}
+
 	http.Handle("/", http.FileServer(http.FS(publicDir)))
+
 	http.HandleFunc("/healthcheck", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(getMoneroDStatus())
